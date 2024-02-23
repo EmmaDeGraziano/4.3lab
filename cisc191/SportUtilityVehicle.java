@@ -1,12 +1,31 @@
 package edu.sdccd.cisc191;
 
-public class SportUtilityVehicle extends Vehicle{
+/**
+ * A vehicle including information on its max towing weight.
+ * @author Emma DeGraziano
+ * @author Jared Canonizado
+ */
+public class SportUtilityVehicle extends Vehicle {
     private int maxTowingWeight;
-    public SportUtilityVehicle(String manufacturer, int milesOnVehicle, int price, int numberOfSeats, int maxTowingWeight){
-        super(manufacturer, milesOnVehicle, price,numberOfSeats);
+
+    /**
+     * Creates a SportUtilityVehicle with the given manufacturer, mileage, price, seats, options, and max towing weight.
+     * @param manufacturer the manufacturer, e.g. Nissan, Jeep
+     * @param milesOnVehicle the mileage
+     * @param price the price
+     * @param numberOfSeats how many seats
+     * @param options an Option array
+     * @param maxTowingWeight the maximum weight it can tow
+     */
+    public SportUtilityVehicle(String manufacturer, int milesOnVehicle, int price, int numberOfSeats, Option[] options, int maxTowingWeight) {
+        super(manufacturer, milesOnVehicle, price, numberOfSeats, options);
         this.maxTowingWeight = maxTowingWeight;
     }
-    public int getMaxTowingWeight(){
+
+    /**
+     * @return the max towing weight of the SUV
+     */
+    public int getMaxTowingWeight() {
         return maxTowingWeight;
     }
 }
